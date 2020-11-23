@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+  }
+  .calculator {
+      display: grid;
+      background-color: blue;
+      
+      height: 700;
+      width: 480px;
+      grid-template-rows: 180px 1fr;
+  }
+  .display {
+      display: grid;
+      grid-row: 1;
+      padding: 5px 8px;
+      border: 2px solid yellow;
+      border-radius: 12px;
+      height: 160px;
+      grid-template-rows: 40px 50px 60px;
+      grid-template-columns: repeat(5, 1fr);
+      background-color: blueviolet;
+  }
+  .held-label {
+      grid-row : 1;
+      grid-column: 1 / 6;
+      font-size: 30px;
+  }
+  .held-value {
+    grid-row: 2;
+    grid-column: 1 / 6;
+    font-size: 30px;
+  }
+  .next-operation {
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 36;
+  }
+  .next-value {
+    font-size: 36px;
+    grid-row: 3;
+    grid-column: 2 / 6;
+    text-align: right;
+  }
+  .digits {
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .memory {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .operations {
+    grid-column: 4;
+    grid-row: 1 / 6;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .digits :last-of-type {
+    grid-column: 2 / 4;
+  }
+  .controls {
+    grid-row: 2;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: orange;
+  }
